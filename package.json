@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "dependencies": {
     "express": "^4.16.4",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "ws": "^6.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
