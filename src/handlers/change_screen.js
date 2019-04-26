@@ -2,15 +2,17 @@ import {wss} from '../index';
 
 const handle_basic = (id) => {
   wss.clients.forEach(client => {
+    console.warn('sending');
     client.send(`CHANGE|${id}`);
   });
 };
 
 export const SCREEN_IDS = {
   HOME: handle_basic,
-  MUSIC: handle_basic,
-  MANUAL: handle_basic,
-  INFORMATION: handle_basic
+  ABOUT: handle_basic,
+  ENTERTAINMENT: handle_basic,
+  CSH: handle_basic,
+  COMPONENTS: handle_basic
 }
 
 export const change = (req, res) => {
