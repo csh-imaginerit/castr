@@ -15,7 +15,7 @@ export const SCREEN_IDS = {
   COMPONENTS: handle_basic
 }
 
-export const change = (req, res) => {
+const change = (req, res) => {
   if (SCREEN_IDS[req.params.screenId]) {
     SCREEN_IDS[req.params.screenId](req.params.screenId);
     res.send('SUCCESS')
@@ -24,3 +24,4 @@ export const change = (req, res) => {
   }
 }
 
+export default change;
