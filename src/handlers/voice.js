@@ -76,6 +76,22 @@ const voice = (req, res) => {
         console.warn('sending voice');
         client.send(`VOICE|${JSON.stringify(req.body.queryResult.fulfillmentText)}`);
       });
+    res.json({
+        "payload": {
+          "google": {
+            "expectUserResponse": true,
+            "richResponse": {
+              "items": [
+                {
+                  "simpleResponse": {
+                    "textToSpeech": "this is a simple response"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      });
     res.send(200);
 }
 
