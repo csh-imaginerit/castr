@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import {wss} from '../index';
-import { back } from '.';
+import { back, next, select } from '.';
 import { change_from_dialog } from './change_screen';
 
 const handlePlay = (arr) => {
@@ -38,6 +38,12 @@ const handleDisplay = (req, res, arr) => {
 
         case 'BACK':
             back(req, res);
+            break;
+        case 'SELECT':
+            select(req, res);
+            break;
+        case 'NEXT':
+            next(req, res);
             break;
 
         case 'SHOW':
