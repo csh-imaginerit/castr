@@ -1,10 +1,14 @@
 import fetch from 'node-fetch';
 import {wss} from '../index';
 import { back, next, select } from '.';
-import { change_from_dialog } from './change_screen';
+import { change_from_dialog } from './change_screen';1
 
 const handlePlay = (arr) => {
-    fetch('http://musicsystem-imagine-rit-music-player.cs.house/resume');
+    if (arr.length < 2) {
+        fetch('http://musicsystem-imagine-rit-music-player.cs.house/resume');
+    } else {
+        fetch(`http://musicsystem-imagine-rit-music-player.cs.house/play?q=${arg[3].toLowerCase()}&type=${arg[2].toLowerCase()}`);
+    }
 }
 
 const handleSpotify = (arr) => {
