@@ -7,7 +7,7 @@ const handlePlay = (arr) => {
     if (arr.length < 2) {
         fetch('http://musicsystem-imagine-rit-music-player.cs.house/resume');
     } else {
-        fetch(`http://musicsystem-imagine-rit-music-player.cs.house/play?q=${arg[3].toLowerCase()}&type=${arg[2].toLowerCase()}`);
+        fetch(`http://musicsystem-imagine-rit-music-player.cs.house/play?q=${arr[3].toLowerCase()}&type=${arr[2].toLowerCase()}`);
     }
 }
 
