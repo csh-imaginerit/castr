@@ -10,6 +10,7 @@ const handle_basic = (id) => {
 export const SCREEN_IDS = {
   HOME: handle_basic,
   ABOUT: handle_basic,
+  SYSTEM: handle_basic,
   ENTERTAINMENT: handle_basic,
   CSH: handle_basic,
   COMPONENTS: handle_basic
