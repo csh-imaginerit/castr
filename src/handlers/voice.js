@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 import {wss} from '../index';
-import { back, next, select } from '.';
+import {next_voice} from './next';
+import {select_voice} from './select';
+import {back_voice} from './back';
 import { change_from_dialog } from './change_screen';1
 
 const handlePlay = (arr) => {
@@ -32,7 +34,7 @@ const handleSpotify = (arr) => {
 }
 
 
-const handleDisplay = (req, res, arr) => {
+const handleDisplay = (req, res, arr) => {handleDisplay
     switch (arr[1]) {
         case 'ON':
 
@@ -41,13 +43,13 @@ const handleDisplay = (req, res, arr) => {
             break;
 
         case 'BACK':
-            back(req, res);
+            back_voice();
             break;
         case 'SELECT':
-            select(req, res);
+            select_voice();
             break;
         case 'NEXT':
-            next(req, res);
+            next_voice();
             break;
 
         case 'SHOW':
@@ -84,7 +86,7 @@ const voice = (req, res) => {
               "items": [
                 {
                   "simpleResponse": {
-                    "textToSpeech": "this is a simple response"
+                    "textToSpeech": "ok."
                   }
                 }
               ]
