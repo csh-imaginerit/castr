@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 import {wss} from '../index';
 import { back } from '.';
 import { change_from_dialog } from './change_screen';
