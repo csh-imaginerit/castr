@@ -13,7 +13,7 @@ const handleSpotify = (arr) => {
             fetch('http://musicsystem-imagine-rit-music-player.cs.house/pause');
             break;
         case 'VOLUME':
-            fetch(`http://musicsystem-imagine-rit-music-player.cs.house/volume?volume=${toLowerCase(arr[2])}`);
+            fetch(`http://musicsystem-imagine-rit-music-player.cs.house/volume?volume=${arr[2].toLowerCase()}`);
             break;
         case 'SKIP_BACKWARD':
             fetch('http://musicsystem-imagine-rit-music-player.cs.house/change?forward=false');
